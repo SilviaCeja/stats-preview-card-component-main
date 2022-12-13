@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --background-color: hsl(233, 47%, 7%);
+    --card-color:hsl(244, 38%, 16%);
+    --text-white:hsl(0, 0%, 100%);
+    --text-purple:hsl(277, 64%, 61%);
+    --text-description:hsla(0, 0%, 100%, 0.75);
+    --text-stat-heading:hsla(0, 0%, 100%, 0.6);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+body{
+    
+    font-family: 'Inter', sans-serif;
+    
+    font-size: 1rem;
+    background-color:var(--background-color);
+    background-size: contain;
+}
+.card{
+    min-height:60vh; 
+    width: 56.25rem;
+    margin: 10% 10% 10% 10%;
+    flex-direction: column;
+    
+    
+}
+.container{
+    background-color: var(--card-color);
+    display: flex;
+    border-radius: 1rem;
+}
+.texto{
+    margin: 4rem;
+}
+.title{
+    display: flex;
+    color: var(--text-white);
+}
+h3{
+    color: var(--text-white);
+    font-weight: 700;
+    font-size: 1.9rem;
+}
+.purple{
+    color:var(--text-purple);
+}
+.description{
+    color:var(--text-description);
+    margin: 1rem 0;
+    font-size: .8rem;
+    
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+}
+.stat{
+    color: var(--text-white);
+    font-size: 1.9rem;
+}
+.stat-heading{
+    color:var(--text-stat-heading);
+    font-size: smaller;
+    font-family: 'Lexend Deca', sans-serif;
+ 
+}
+.statistiscs{
+    display: flex;
+    justify-content: space-around;
+}
+.heading-stats{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imagen{
+    width: 54rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, #6e0dd082, #6e0dd082), url("/images/image-header-desktop.jpg");
+    
+    border-radius: 0  1rem 1rem 0;
+}
+
+@media(max-width:375px){
+    .card{
+        min-height:60vh; 
+        width: 13.75rem;
+        margin: 10% 10% 10% 10%;
+        
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .imagen{
+        width: 14rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(0deg, #6e0dd082, #6e0dd082), url("/images/image-header-mobile.jpg");
+        height: 10rem;
+        border-radius: 1rem  1rem 0 0;
+    }
+    .texto{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    .description{
+        font-size: .55rem;
+        text-align: center;
+    }
+    .statistiscs{
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats{
+        margin: 1rem;
+    }
+}
+
+
